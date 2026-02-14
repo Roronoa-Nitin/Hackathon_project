@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>System Dashboard</h2>
+
+    <p>Total Submissions: {{ total_entries }}</p>
+    <p>Average Score: {{ avg_score }}</p>
+    <p>Most Common Category: {{ most_common_category }}</p>
+
+    <h3>Submission History:</h3>
+
+    <ul>
+    {% for entry in data %}
+        <li>{{ entry[0] }} → {{ entry[1] | safe }}</li>
+    {% endfor %}
+    </ul>
+
+    <a href="/">Go Back</a>
+</body>
+</html>
